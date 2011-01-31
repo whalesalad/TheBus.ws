@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Give Us Your Feedback &rsaquo; {{ block.super }} {% endblock %}
+
+{% block content %}
+    <p>TheBus.ws is a personal project that I created to make HEA better for everyone. I <strong>truly</strong> value feedback from users, and would love to hear what you've got to say! Questions, comments, problems, feel free to write anything below.</p>
+    <p>Everything is anonymous, but if you'd like me to respond to a question, please enter your email address. <strong>It's optional!</strong></p>
+    
+    {% if feedback_success %}
+        <div class="notice grey">
+            <p>
+                <strong>Your feedback has been submitted successfully. Thank you!</strong>
+            </p>
+        </div>
+    {% endif %}
+    
+    <form action="." method="POST">
+        {% for field in feedback_form %}
+        <div class="field">
+            <strong>{{ field.label}}</strong>{% if field.errors %} &bull; <span class="errors">{{ field.errors|join:", " }}</span>{% endif %}<br/>
+            {{ field }}<br/>
+            <span class="msg">{{ field.help_text }}</span>
+        </div>
+        {% endfor %}
+
+        <p><input type="submit" value="Send Feedback &rarr;"></p>
+    </form>
+{% endblock %}

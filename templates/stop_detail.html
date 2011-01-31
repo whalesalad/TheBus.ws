@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Stop {{ stop.code}} &mdash; {{ stop.name|title }} &rsaquo; {{ block.super }} {% endblock %}
+
+{% block content %}
+    <div class="stopHead">
+        <div class="stopNumber">
+            <span class="text">{{ stop.short_direction }}</span>
+            <span class="num">{{ stop.code }}</span>
+        </div>
+        
+        <h3>{{ stop.name|title }}</h3>
+        <h4>Serving route{{ routes|pluralize }}: {{ routes|join:", " }}</h4>
+        <p><a href="{{ stop.hea_url }}" target="_blank">View on HEA</a> &bull; <a href="{{ stop.get_nearby_stops_url }}">Nearby Stops</a></p>
+    </div>
+        
+    <a href="{{ stop.map_url }}" target="_blank"><img class="stopMap" src="http://maps.google.com/maps/api/staticmap?center={{ stop.latitude }},{{ stop.longitude }}&zoom=16&size=300x150&maptype=roadmap&markers=color:blue|{{ stop.latitude }},{{ stop.longitude }}&sensor=false" /></a>
+    
+    {% if times %}
+    <ul class="list stop_times">
+        {% for time in times %}
+        <li class="time">
+            <h4 class="route">{{ time.name|safe }}</h4>
+            <span class="meta">{{ time.time|safe }} &bull; <strong>{{ time.direction }}</strong></span>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>An error occurred while retrieving the times for this stop from TheBus. This happens sometimes, please reload this page to try again (which will most likely work fine).</p>
+    {% endif %}
+
+{% endblock %}

@@ -1,0 +1,101 @@
+route_long_name,route_type,route_text_color,agency_id,route_id,route_color,route_desc,route_url,route_short_name
+Tripler-Mapunapuna,3,,1,24,,,,31
+Kalihi-Pearlridge,3,,1,25,,,,32
+Honolulu-Makaha,3,,1,26,,,,40
+Kapolei-Ewa Beach,3,,1,27,,,,41
+Beach Bus,3,,1,21,,,,22
+City Express! A,3,,1,22,,,,A
+City Express! B,3,,1,23,,,,B
+Ewa Beach-Waikiki,3,,1,28,,,,42
+Waipahu-Honolulu-Ala Moana,3,,1,29,,,,43
+Nuuanu-Punahou,3,,1,4,,,,4
+Waikiki-Ala Moana,3,,1,8,,,,8
+Makakilo City Express,3,,1,59,,,,92
+Ewa Beach Express,3,,1,58,,,,91
+Kahaluu-Ahuimanu Express,3,,1,55,,,,88
+Windward-Pearl Harbor Express,3,,1,54,,,,86
+Pearl City Express,3,,1,57,,,,90
+Waimanalo-Kailua Express,3,,1,56,,,,89
+Wahiawa Town Express,3,,1,51,,,,83
+Hawaii Kai Park & Ride Express,3,,1,50,,,,82
+Windward Express-Kailua,3,,1,53,,,,85
+Mililani Express-North,3,,1,52,,,,84
+Mililani South,3,,1,115,,,,504
+Mililani-Laulani Valley,3,,1,114,,,,503
+East-West Waipahu,3,,1,88,,,,432
+Waipahu-Waikele Shopping Center,3,,1,89,,,,433
+Mililani Mauka,3,,1,113,,,,501
+Palahia-Makakilo-Kapolei,3,,1,112,,,,414
+Lualualei Homestead,3,,1,82,,,,402
+Nanakuli-Maili-Waianae,3,,1,83,,,,403
+Upper Aina Haina Express,3,,1,80,,,,80B
+Waianae Valley,3,,1,81,,,,401
+Campbell Industrial Park,3,,1,86,,,,413
+Kapolei Transit Center-Kalaeloa,3,,1,87,,,,415
+Makakilo Heights,3,,1,84,,,,411
+Panana-Kapolei,3,,1,85,,,,412
+Kaimuki-Salt Lake,3,,1,3,,,,3
+Kalihi Valley,3,,1,7,,,,7
+Kahala Mall-Waialae Iki,3,,1,108,,,,235
+Country Express! E,3,,1,109,,,,E
+Downtown-Hawaii Kai Limited,3,,1,102,,,,1L
+Hawaii Kai-Sea Life Park,3,,1,103,,,,23
+Kahala Mall-Waialae Nui,3,,1,107,,,,234
+Hawaii Kai-Hahaione Valley,3,,1,104,,,,231
+Honolulu-Kahaluu,3,,1,39,,,,65
+Honolulu-Wahiawa Heights,3,,1,38,,,,62
+Honolulu-Pearl City,3,,1,33,,,,54
+Honolulu-Pacific Palisades,3,,1,32,,,,53
+Wahiawa-Circle Island,3,,1,31,,,,52
+Waipahu-Ewa Beach,3,,1,30,,,,44
+Kailua-Waimanalo-Sea Life Park,3,,1,36,,,,57
+Honolulu-Kailua-Kaneohe,3,,1,35,,,,56
+Kaneohe-Circle Island,3,,1,34,,,,55
+Waianae Coast Express-CBD,3,,1,60,,,,93
+Hawaii Kai-Pearl Harbor Express,3,,1,61,,,,95
+Waipio Gentry Express,3,,1,62,,,,96
+Village Park Express,3,,1,63,,,,97
+Wahiawa-Mililani Park & Ride,3,,1,64,,,,98
+Ewa Gentry Express,3,,1,65,,,,101
+Villages of Kapolei Express,3,,1,66,,,,102
+Paiwa-Waikele Express,3,,1,67,,,,103
+Honolulu-Makaha,3,,1,68,,,,40A
+Hawaii Kai Park & Ride Express-UH,3,,1,69,,,,80A
+Waikiki-School-Middle,3,,1,2,,,,2
+Pauoa-Woodlawn,3,,1,6,,,,6
+Waipahu-Village Park,3,,1,90,,,,434
+Makalapa-Halawa-Aiea Heights,3,,1,11,,,,11
+Kalihi-Alewa Heights,3,,1,10,,,,10
+St. Louis-Kahala-Maunalani,3,,1,13,,,,14
+Waikiki-Liliha,3,,1,12,,,,13
+Moanalua Valley,3,,1,15,,,,16
+Makiki-Pacific Heights,3,,1,14,,,,15
+University-Ala Moana,3,,1,17,,,,18
+Makiki-Ala Moana,3,,1,16,,,,17
+Waikiki-Pearlridge,3,,1,19,,,,20
+Waikiki-Airport-Hickam,3,,1,18,,,,19
+Villages of Kapolei-Kaupea Express,3,,1,117,,,,94
+Aina Haina-Ala Moana,3,,1,116,,,,24
+Hawaii Kai Park & Ride Express,3,,1,48,,,,80
+Waipahu Express,3,,1,49,,,,81
+Waialua-Haleiwa,3,,1,46,,,,76
+Waimanalo-Kaneohe,3,,1,47,,,,77
+Leeward Community College,3,,1,44,,,,73
+Aiea-Halawa Heights,3,,1,45,,,,74
+Pearlridge-Newtown,3,,1,42,,,,71
+Schofield-Wahiawa-Whitmore,3,,1,43,,,,72
+Country Express! C,3,,1,40,,,,C
+Lanikai-Maunawili,3,,1,41,,,,70
+Kaimuki-Kalihi,3,,1,1,,,,1
+Ala Moana-Manoa,3,,1,5,,,,5
+Palolo Valley-Pearl Harbor,3,,1,9,,,,9
+Waipahu via Farrington Express,3,,1,77,,,,201
+Kunia-Wahiawa-Mililani,3,,1,76,,,,98A
+Waianae Coast Express-Pearl Harbor,3,,1,75,,,,93A
+North Shore Express,3,,1,74,,,,88A
+Kaneohe-Kahaluu Pearl Harbor Exp.,3,,1,73,,,,86A
+Windward Express-Haiku,3,,1,72,,,,85A
+Mililani Express-South,3,,1,71,,,,84A
+Wahiawa-Mililani Exp-Schofield/PH,3,,1,70,,,,83A
+Kalihi via School Street Express,3,,1,79,,,,203
+Waipahu via Paiwa Express,3,,1,78,,,,202

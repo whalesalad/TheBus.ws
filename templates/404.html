@@ -1,0 +1,11 @@
+{% extends "base.html" %}{% load markup %}
+
+{% block title %}404 Not Found &rsaquo; {{ block.super }} {% endblock %}
+
+{% block search %}{% endblock %}
+
+{% block content %}
+    <p><strong>404 Not Found</strong></p>
+    <p>Sorry, but the page you requested could not be found.</p>
+    <p>&larr; <a href="{% url home %}">Go Home</a></p>
+{% endblock %}

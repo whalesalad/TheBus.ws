@@ -1,0 +1,16 @@
+<h3>There was a new feedback message written on TheBus, here are the details:</h3><br/>
+
+{% if payload.email %}
+<p><strong>Email:</strong></p>
+<p>{{ payload.email }}</p><br/>
+{% endif %}
+
+<p><strong>Message:</strong></p>
+<blockquote>{{ payload.message|safe|linebreaks }}</blockquote><br/>
+
+<p><strong>Client Info:</strong></p>
+<p>{{ payload.client_info.HTTP_USER_AGENT }}</p><br/>
+
+<p>Sincerely,</p><br/>
+
+<p>The TheBus Feedback Emailer Bot</p>

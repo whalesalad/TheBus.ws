@@ -1,0 +1,282 @@
+* { margin: 0; padding: 0; }
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: Helvetica, Arial, Sans-serif;
+    font-size: 12px;
+    background: #EEE;
+}
+
+a img {
+    border: none;
+}
+
+h3 a {
+    color: #1577C8;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+#wrapper {
+    border: 1px solid #DDD;
+    background: #FFF;
+}
+
+    #wrapper #header {
+        background: url(/static/img/headerBg.png);
+        height: 70px;
+        color: #333;
+        line-height: 30px;
+    }
+    
+        #wrapper #header img.logo {
+            position: absolute;
+            top: 9px;
+            left: 15px;
+        }
+    
+        #wrapper #header h1 {
+            display: none;
+            font-size: 14px;
+            padding: 0 15px;
+        }
+        
+        #wrapper #header a#stopsNearMeButton {
+            position: absolute;
+            top: 8px;
+            right: 10px;
+            display: inline-block;
+            background: #CCC;
+            background-image: -webkit-gradient(linear, 0 top, 0 bottom, from(#EEE), to(#999));;
+            -webkit-border-radius: 30px;
+            -moz-border-radius: 30px;
+            line-height: 25px;
+            height: 25px;
+            padding: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            color: #333;
+            text-shadow: 0 1px 0 #EEE;
+            
+        }
+        
+        #wrapper #header #search {
+            position: absolute;
+            top: 41px;
+            left: 15px;
+        }
+        
+            #wrapper #header #search input#id_query {
+                padding: 2px;
+                width: 250px;
+            }
+
+    #wrapper #content {
+        padding: 10px;
+        line-height: 18px;
+    }
+    
+    #wrapper #content p {
+        margin-bottom: 10px;
+    }
+    
+    #wrapper #content p a {
+        color: #103497;
+        border-bottom: 1px dotted #103497;
+        text-decoration: none;
+    }
+    
+        #wrapper #content p a:hover {
+            border-bottom: 1px solid #103497;
+        }
+
+#content ul.list {
+    list-style: none;
+    clear: both;
+}
+
+    #content ul.list li {
+        clear: both;
+        padding-top: 10px;
+        margin-bottom: 10px;
+        border-top: 1px dotted #DDD;
+    }
+    
+    #content ul.list li a {
+        text-decoration: none;
+        color: #444;
+        display: block;
+    }
+
+/* stops */
+div.stopNumber {
+    float: left;
+    margin: 4px 10px 10px 0;
+}
+
+    div.stopNumber span {
+        display: block;
+        width: 50px;
+        text-align: center;
+    }
+    
+    div.stopNumber span.text {
+        -webkit-border-top-right-radius: 5px;
+        -webkit-border-top-left-radius: 5px;
+        border: 1px solid #444;
+        border-width: 1px 1px 0 1px;
+        background: #888;
+        color: #FFF;
+        font-size: 11px;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    
+    div.stopNumber span.num {
+        -webkit-border-bottom-right-radius: 5px;
+        -webkit-border-bottom-left-radius: 5px;
+        border: 1px solid #555;
+        border-width: 0 1px 1px 1px;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 5px 0;
+    }
+
+div.stopHead:after {
+    content: ".";
+    display: block;
+    visibility: hidden;
+    height: 0;
+    clear: both;
+}
+
+div.stopMeta {
+    margin-left: 60px;
+}
+
+    div.stopMeta h3.stopName {
+        line-height: 20px;
+        color: #000;
+    }
+    
+    div.stopMeta span.stopDetails {
+        font-size: 12px;
+    }
+    
+    div.stopMeta span.distance {
+        display: block;
+        background: url(/static/img/geo.png) top left no-repeat;
+        margin: 2px 0 0 0;
+        padding: 0 0 0 20px;
+        line-height: 16px;
+    }
+    
+#footer {
+    padding: 15px;
+    line-height: 18px;
+    text-shadow: 0 1px 0 #FFF;
+}
+
+    #footer a {
+        color: #C68507;
+        text-decoration: none;
+        border-bottom: 1px dotted #C68507;
+    }
+    
+    #footer a:hover {
+        border-bottom: 1px solid #C68507;
+    }
+    
+    #footer p.links {
+        color: #C68507;
+    }
+
+ul.basic {
+    margin: 10px 30px;
+}
+
+div.update {
+    
+}
+
+    div.update .updateMeta {
+        border-bottom: 1px dotted #DDD;
+        margin-bottom: 7px;
+    }
+    
+        .update .updateMeta small {
+            color: #999;
+            font-size: 11px;
+        }
+    
+ul.updates {
+    list-style: none;
+}
+
+    ul.updates li {
+        margin-bottom: 20px;
+    }
+
+div.notice {
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background: #EEE;
+    padding: 7px;
+    margin: 0 0 10px 0;
+}
+
+    div.notice p {
+        margin: 0 !important;
+    }
+
+a.rssButton {
+    margin-left: 3px;
+    padding: 2px 4px;
+    background: orange;
+    border: none !important;
+    font-weight: bold;
+    color: #FFF !important;
+    font-size: 11px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    text-shadow: 0 1px 0 #CC6534;
+}
+
+    a.rssButton:hover {
+        background: #FFF;
+        color: orange !important;
+        border: 1px solid orange !important;
+        text-shadow: none;
+    }
+    
+form {
+    
+}
+
+form div.field {
+    margin-bottom: 15px;
+}
+
+form div.field .errors {
+    color: red;
+}
+
+form div.field input,
+form div.field textarea {
+    padding: 5px;
+}
+
+form div.field input {
+    width: 200px;
+}
+
+form div.field span.msg {
+    color: #999;
+}

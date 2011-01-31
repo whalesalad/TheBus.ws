@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}Stops near {{ location_string.0 }} &rsaquo; {{ block.super }} {% endblock %}
+
+{% block content %}
+    {% if location_string %}
+    <p>You are somewhere near <strong>{{ location_string.0 }}</strong>, shown on the map below:</p>
+    <a href="http://maps.google.com/?q={{ location_string.0|urlencode }}" target="_blank"><img class="stopMap" src="http://maps.google.com/maps/api/staticmap?center={{ location_string.0|urlencode }}&zoom=16&size=300x150&maptype=roadmap&markers=color:blue|{{ location_string.0|urlencode }}&sensor=false" /></a>
+    {% endif %}
+    
+    {% if stops %}
+        <ul class="list results stops">
+        {% for stop in stops %}
+            <li class="stop" id="stop-{{ stop.code }}"><a href="{{ stop.get_absolute_url }}">
+                <div class="stopNumber">
+                    <span class="text">Stop</span>
+                    <span class="num">{{ stop.code }}</span>
+                </div>
+                <div class="stopMeta">
+                    <h3 class="stopName">{{ stop.name|title }}</h3>
+                    <span class="stopDetails">
+                        {% if stop.direction or stop.routes.all %}
+                        {% if stop.direction %}<strong>{{ stop.get_direction_display }}</strong> &middot; {% endif %}
+                        Route{{ stop.routes.all|pluralize:",s:" }} {{ stop.route_string }}
+                        {% else %}
+                        View stop for more details.
+                        {% endif %}
+                    </span>
+                    <span class="distance">{{ stop.distance }} feet away</span>
+                </div>
+            </a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+    <p>Sorry, no stops were found for your search.</p>
+    {% endif %}
+    
+{% endblock %}

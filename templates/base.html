@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>{% block title %}HEA++{% endblock %}</title>
+    
+    <meta name="viewport" content="width=320; user-scalable=no;" />
+    <link rel="stylesheet" href="/static/style.css" type="text/css">
+    
+    <script src="http://code.google.com/apis/gears/gears_init.js" type="text/javascript" charset="utf-8"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
+    <script src="/static/js/thebus.js" type="text/javascript"></script>
+    {% if not settings.DEBUG %}<script src="http://mint.thebus.ws/?js" type="text/javascript"></script>{% endif %}
+    
+    <link rel="apple-touch-icon" href="/static/img/icon.png" />
+    
+    {% block head %}{% endblock %}
+    
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <a href="/"><img class="logo" src="/static/img/logo.png" alt="TheBus" /></a>
+            <h1>TheBus, Enhanced</h1>
+            <a id="stopsNearMeButton" href="#">Stops Near Me</a>
+            
+            {% block search %}
+            <div id="search">
+                <form action="/q/" method="get">
+                    {% for field in form %}{{ field}}{% endfor %}
+                    <input type="submit" value="Go">
+                </form>
+            </div>
+            {% endblock %}
+        </div>
+        <div id="content">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+    
+    <div id="footer">
+        <p><strong>a <a href="http://whalesalad.com" target="_blank">whalesalad</a> experiment</strong></p>
+        <p class="links"><a href="{% url about %}">about</a> &bull; <a href="{% url updates %}">updates</a> &bull; <a href="{% url feedback %}">feedback</a> &bull; <a href="http://hea.thebus.org">the real hea</a></p>
+    </div>
+</body>
+</html>

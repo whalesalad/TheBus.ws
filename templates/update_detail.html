@@ -1,0 +1,17 @@
+{% extends "base.html" %}{% load markup %}
+
+{% block title %}{{ update.title }} &rsaquo; {{ block.super }} {% endblock %}
+
+{% block content %}
+    <div class="update" id="update-{{ update.id }}">
+        <div class="updateMeta">
+            <h3>{{ update.title }}</h3>
+            <small>Published at {{ update.published|date:"P" }} on {{ update.published|date:"N j<\s\u\p>S</\s\u\p> Y"|safe }}{% if update.version %} &bull; <strong>Version {{ update.version }}</strong>{% endif %}{% if user.is_staff %} &bull; <a href="{% url admin:web_update_change update.id %}">Edit in Admin</a>{% endif %}</small>
+        </div>
+        <div class="updateBody">
+            {{ update.body|markdown }}
+        </div>
+    </div>
+    
+    <p>&larr; <a href="{% url updates %}">Back to Updates</a></p>
+{% endblock %}

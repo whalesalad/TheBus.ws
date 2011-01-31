@@ -1,0 +1,5 @@
+# Git Ignores
+*.pyc
+locale/*.mo
+.DS_Store
+local_settings.py

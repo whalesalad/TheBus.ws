@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}About &rsaquo; {{ block.super }} {% endblock %}
+
+{% block content %}
+    <p><strong>What is this (HEA++)?</strong></p>
+    <p>Late in 2009 I discovered the wonderful <a href="http://hea.thebus.org" target="_blank">HEA system</a> created by <a href="http://thebus.org" target="_blank">TheBus</a> to make riding the bus easier. It's a fantastic service which lets you look up a specific stop by intersection or ID, and then see all of the buses coming to that stop, realtime, thanks to GPS onboard every bus.</p>
+    <p>Being an avid rider I came to use the system quite often, both on my previous iPhone 3G and now on my Android powered phone. In riding frequently, I also came to realize the many shortcomings of the HEA system. Sometimes you know you're near a bus stop, but have no idea what the Stop ID is and can't look it up. Same is true for not knowing an intersection. TheBus is making progress installing new code signs at every stop, but the majority are unlabeled. Another problem I face time and time again is searching for an intersection, finding two stops with the same name (across from the street from each other) and not knowing which one goes which direction. <strong>I truly commend the guys at TheBus for their hard work in creating HEA, it's a priceless service,</strong> however it's clearly lacking in certain areas.</p>
+        
+    <p>So, being a TheBus rider and web geek, I decided to take it upon myself to address some of the shortcomings of the system and built my own. You're looking at my first public non-embarrassing version of HEA++, which does a few things that the standard HEA does not.</p>
+    
+    <ul class="basic">
+        <li><strong>Find stops near you with GPS</strong> &mdash; My girlfriend and I walk around with these magnificent devices all day long, which have a wonderful feature known as GPS. On modern devices (Android and iPhone tested so far) I get your GPS coordinates and pass those on to my server, where I deliver a list of stops close to you. It's pretty robust right now, and ideally with a little more testing and perfection you'll never ever need to type in a stop ID or intersection again! Tap the <strong>"Stops Near Me"</strong> button in the top right of any page, and you'll see what I mean!</li>
+        
+        <li><strong>The route and direction of a stop is listed in search results</strong> &mdash; One of the biggest issues with HEA is knowing your intersection, and finding 2 stops. Sure it's simple to check one, backtrack, and look at the other, but it's also easier to know that I am heading west, and view the westbound stop. HEA++ does a good job with this, showing you both the direction of the stop as well as all of the routes that service it.</li>
+        
+        <li><strong>Find stops near other stops</strong> &mdash; If you're viewing a stop you can quickly jump to a list of stops nearby with one touch, and quickly decide which route you want to take home!</li>
+    </ul>
+    
+    <p>I have a TON of functionality planned for the very near future. Unfortunately I need to pay my bills, so certain things will take priority over this. <strong>However</strong>, I certainly appreciate any comments, feedback, requests, or other inquiries. Feel free to <a href="mailto:michael@whalesalad.com">email me here</a> if you'd like!</p>
+    
+    <p>For those curious, this site was built using <a href="http://djangoproject.com" target="_blank">Django</a> on top of a <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> db with a small handful of external libraries. It's hosted on a <a href="http://j.mp/linodesalad" target="_blank">Linode server</a>. If you'd like to learn more about me personally, head over to my personal site, <a href="http://whalesalad.com/" target="_blank">whalesalad</a>.</p>
+    
+    <p><img src="/static/img/pony.png" alt="" /></p>
+{% endblock %}

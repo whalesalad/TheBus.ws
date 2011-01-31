@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% comment %}
+    name = models.CharField(max_length=100)
+    short_name = models.CharField(unique=True, null=False, max_length=4)
+
+    # OTS Fields
+    ots_route_id = models.IntegerField(unique=True, null=False)
+    
+{% endcomment %}
+
+{% block content %}
+    <span>{{ route.short_name}}</span>
+    <h3>{{ route.name }}</h3>
+    
+    {% if trips %}
+    <dl>
+        {% for t in trips %}
+        <dt>{{ t.ots_trip_id }}</dt>
+        <dd>{{ t.headsign }}</dd>
+        {% endfor %}
+    </dl>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}Search results for: {{ query }} &rsaquo; {{ block.super }} {% endblock %}
+
+{% block content %}
+    {% if query %}
+    <p>You searched for <strong>{{ query }}</strong> &middot; here are your results:</p>
+    {% endif %}
+    
+    {% if stops %}
+        <ul class="list results stops">
+        {% for stop in stops %}
+            <li class="stop" id="stop-{{ stop.code }}"><a href="{{ stop.get_absolute_url }}">
+                <div class="stopNumber">
+                    <span class="text">Stop</span>
+                    <span class="num">{{ stop.code }}</span>
+                </div>
+                <div class="stopMeta">
+                    <h3 class="stopName">{{ stop.name|title }}</h3>
+                    <span class="stopDetails">
+                        {% if stop.direction or stop.routes.all %}
+                        {% if stop.direction %}<strong>{{ stop.get_direction_display }}</strong> &middot; {% endif %}
+                        Route{{ stop.routes.all|pluralize:",s:" }} {{ stop.route_string }}
+                        {% else %}
+                        View stop for more details.
+                        {% endif %}
+                    </span>
+                </div>
+            </a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+    <p>Sorry, no stops were found for your search.</p>
+    {% endif %}
+    
+{% endblock %}

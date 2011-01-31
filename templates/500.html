@@ -1,0 +1,11 @@
+{% extends "base.html" %}{% load markup %}
+
+{% block title %}500 Server Error &rsaquo; {{ block.super }} {% endblock %}
+
+{% block search %}{% endblock %}
+
+{% block content %}
+    <p><strong>500 Server Error</strong></p>
+    <p>Sorry, but our server encountered an error.</p>
+    <p>&larr; <a href="{% url home %}">Go Home</a></p>
+{% endblock %}

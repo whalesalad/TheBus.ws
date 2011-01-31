@@ -1,0 +1,25 @@
+{% extends "base.html" %}{% load markup custom_filters %}
+
+{% block title %}Updates &rsaquo; {{ block.super }} {% endblock %}
+
+{% block content %}
+    <div class="notice grey">
+        <p>
+            <strong>News and Version Updates</strong> <a class="rssButton" href="{% url feeds "updates" %}">RSS</a><br/>
+            TheBus.ws announcements, version releases, and other ramblings of the developer! 
+        </p>
+    </div>
+    
+    <ul class="updates">
+    {% for update in updates %}
+        <li class="update">
+            <div class="updateMeta">
+                <h3><a href="{{ update.get_absolute_url }}">{{ update.title }}</a></h3>
+                <small>Published at {{ update.published|date:"P" }} on {{ update.published|date:"N j<\s\u\p>S</\s\u\p> Y"|safe }}{% if update.version %} &bull; <strong>Version {{ update.version }}</strong>{% endif %}{% if user.is_staff %} &bull; <a href="{% url admin:web_update_change update.id %}">Edit in Admin</a>{% endif %}</small>
+            </div>
+            {{ update.body|shorten:"150 &hellip;"|markdown }}
+        </li>
+    {% endfor %}
+    </ul>
+
+{% endblock %}
